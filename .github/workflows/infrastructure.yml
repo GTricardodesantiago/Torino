@@ -10,7 +10,7 @@ defaults:
 jobs:
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
-    uses: GTricardodesantiago/Torino/blob/dev/.github/workflows/infrastructure-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/infrastructure-env.yml@dev
     with:
       ENV_NAME: dev
     secrets:
@@ -22,7 +22,7 @@ jobs:
 
   deploy-test:
     if: github.ref == 'refs/heads/test'
-    uses: Neoteroi/Torino/.github/workflows/infrastructure-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/infrastructure-env.yml@dev
     with:
       ENV_NAME: test
     secrets:
@@ -34,7 +34,7 @@ jobs:
 
   deploy-prod:
     if: github.ref == 'refs/heads/prod'
-    uses: Neoteroi/Torino/.github/workflows/infrastructure-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/infrastructure-env.yml@dev
     with:
       ENV_NAME: prod
     secrets:
