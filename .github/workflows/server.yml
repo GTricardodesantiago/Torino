@@ -131,7 +131,7 @@ jobs:
   deploy-dev:
     needs: build-app
     if: github.ref == 'refs/heads/dev' && github.event_name == 'release'
-    uses: Neoteroi/Torino/.github/workflows/server-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/server-env.yml@dev
     with:
       ENV_NAME: dev
     secrets:
@@ -142,7 +142,7 @@ jobs:
   deploy-test:
     needs: build-app
     if: github.ref == 'refs/heads/test' && github.event_name == 'release'
-    uses: Neoteroi/Torino/.github/workflows/server-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/server-env.yml@dev
     with:
       ENV_NAME: test
     secrets:
@@ -153,7 +153,7 @@ jobs:
   deploy-prod:
     needs: build-app
     if: github.ref == 'refs/heads/prod' && github.event_name == 'release'
-    uses: Neoteroi/Torino/.github/workflows/server-env.yml@dev
+    uses: GTricardodesantiago/Torino/.github/workflows/server-env.yml@dev
     with:
       ENV_NAME: prod
     secrets:
