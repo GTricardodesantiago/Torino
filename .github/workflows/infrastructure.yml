@@ -10,7 +10,7 @@ defaults:
 jobs:
   deploy-dev:
     if: github.ref == 'refs/heads/dev'
-    uses: Neoteroi/Torino/.github/workflows/infrastructure-env.yml@dev
+    uses: GTricardodesantiago/Torino/blob/dev/.github/workflows/infrastructure-env.yml@dev
     with:
       ENV_NAME: dev
     secrets:
